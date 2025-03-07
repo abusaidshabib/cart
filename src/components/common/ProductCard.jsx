@@ -1,6 +1,7 @@
 import React from "react";
 import cart from "@/assets/products/cart.png";
 import wishlist from "@/assets/products/wishlist.svg";
+import "@/ui/styles/swiper.css";
 
 const ProductCard = ({ title, image, price }) => {
   return (

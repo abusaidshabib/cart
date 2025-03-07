@@ -8,17 +8,3 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
-
-.swiper-but-prev {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  z-index: 100;
-}
-
-.swiper-but-next {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  z-index: 100;
-}
