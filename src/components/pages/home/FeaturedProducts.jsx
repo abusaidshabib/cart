@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, memo } from "react";
 import ProductCard from "@/components/common/ProductCard";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -6,9 +6,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { getProducts } from "@/services/productServices";
 import { CgSpinner } from "react-icons/cg";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import rightArrow from "@/assets/products/arrow.png";
 import { Link } from "react-router-dom";
+
+const MemoizedProductCard = memo(ProductCard);
 
 const FeaturedProducts = () => {
   const [fetchState, setFetchState] = useState({
@@ -130,7 +131,7 @@ const FeaturedProducts = () => {
         >
           {products.map((product, index) => (
             <SwiperSlide key={index}>
-              <ProductCard {...product} />
+              <MemoizedProductCard {...product} />
             </SwiperSlide>
           ))}
         </Swiper>
