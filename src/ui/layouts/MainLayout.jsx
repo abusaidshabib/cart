@@ -4,7 +4,7 @@ import Navbar from "@/components/shared/Navbar.jsx";
 
 const MainLayout = () => {
   return (
-    <div className="w-screen">
+    <div>
       <Navbar />
       <Outlet />
     </div>
