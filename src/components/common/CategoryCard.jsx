@@ -49,12 +49,14 @@ const CategoryCard = ({ index, name }) => {
     <div
       className={`${images[index]?.cssbg} flex p-4 rounded-lg justify-between relative overflow-hidden`}
     >
-      <p className="text-xl font-semibold capitalize">{name}</p>
+      <div>
+        <p className="text-xl font-semibold capitalize">{name}</p>
+      </div>
       <div className="h-28 flex items-end justify-end z-40">
         <img className="w-full" src={images[index]?.img} alt="" />
       </div>
       <div
-        className={`w-28 h-28 absolute right-0 bottom-0 rounded-full ${images[index]?.cssshape }`}
+        className={`w-28 h-28 absolute right-0 bottom-0 rounded-full ${images[index]?.cssshape}`}
       ></div>
     </div>
   );

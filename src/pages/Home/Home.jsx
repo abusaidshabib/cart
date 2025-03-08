@@ -4,6 +4,10 @@ import Whyus from "@/components/pages/home/Whyus";
 import ProductsCategory from "@/components/pages/home/ProductsCategory";
 import { CgSpinner } from "react-icons/cg";
 import OnSaleProducts from "../../components/pages/home/OnSaleProducts";
+import FeaturedCollection from "../../components/pages/home/FeaturedCollection";
+import GroceryProducts from "../../components/pages/home/GroceryProducts";
+import HomeKitchenProducts from "../../components/pages/home/HomeKitchenProducts";
+import GadgetProducts from "../../components/pages/home/GadgetProducts";
 
 // Lazy load FeaturedProducts
 const FeaturedProducts = lazy(() =>
@@ -26,6 +30,10 @@ const Home = () => {
       </Suspense>
       <ProductsCategory />
       <OnSaleProducts />
+      <FeaturedCollection />
+      <GroceryProducts />
+      <HomeKitchenProducts />
+      <GadgetProducts />
     </div>
   );
 };
