@@ -8,6 +8,11 @@ import { getProducts } from "@/services/productServices";
 import { CgSpinner } from "react-icons/cg";
 import rightArrow from "@/assets/products/arrow.png";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import {
+  setProducts,
+  setProductsCategory,
+} from "../../../redux/slices/productSlice";
 
 const MemoizedProductCard = memo(ProductCard);
 
@@ -18,6 +23,8 @@ const FeaturedProducts = () => {
     isSuccess: false,
     isError: false,
   });
+
+  const dispatch = useDispatch();
 
   const swiperRef = useRef(null);
   const prevRef = useRef(null);
@@ -36,6 +43,8 @@ const FeaturedProducts = () => {
 
       try {
         const productData = await getProducts();
+        dispatch(setProducts(productData));
+        dispatch(setProductsCategory());
         setFetchState((prev) => ({
           ...prev,
           products: productData,
