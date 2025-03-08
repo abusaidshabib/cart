@@ -11,6 +11,7 @@ export default {
         neural1: "#A8DDD5B2",
         neural2: "#D5B1E8B2",
         neural3: "#F5F5F599",
+        neural4: "#F1B35C",
       },
     },
   },

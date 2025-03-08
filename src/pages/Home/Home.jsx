@@ -3,6 +3,7 @@ import Hero from "@/components/pages/home/Hero";
 import Whyus from "@/components/pages/home/Whyus";
 import ProductsCategory from "@/components/pages/home/ProductsCategory";
 import { CgSpinner } from "react-icons/cg";
+import OnSaleProducts from "../../components/pages/home/OnSaleProducts";
 
 // Lazy load FeaturedProducts
 const FeaturedProducts = lazy(() =>
@@ -24,6 +25,7 @@ const Home = () => {
         <FeaturedProducts />
       </Suspense>
       <ProductsCategory />
+      <OnSaleProducts />
     </div>
   );
 };
